@@ -1,7 +1,12 @@
+@-webkit-keyframes typing { from { width: 0; } to {width: 100%;} }
+@-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
+
 body {
   font-family: "Oxygen",sans-serif;
   line-height: 1.5;
   display:grid;
+  box-sizing: border-box;
+  position: relative;
 }
 
 h4 {
@@ -13,25 +18,59 @@ h4 {
   color: red;
 }
 
-section {
-  color: #979797
+.typed {
+  border-right: .1em solid #979797;
+  width: 15ch;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-animation: typing 5s steps(24, end),
+             blink-caret .5s step-end infinite alternate;
+  animation: typing 2s steps(21, end),
+             blink-caret .5s step-end infinite alternate;
 }
 
-nav {
-  background-color: rgba(31, 75, 100,0.8);
+.text-center {
+  text-align: center;
+  padding-top: 2rem;
+}
+
+section {
+  color: #979797;
+}
+
+header {
+  background-color: rgb(31, 75, 100);
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  position: fixed;
+  z-index: 1000;
 }
 
-nav h4 {
-  padding-left: 1rem;
+.scrolled-header {
+  background-color: rgb(31, 75, 100);
+  padding: 0;
 }
 
-.menu-links{
+.menu-links {
   display: none;
+}
+
+.menu-links li {
+  display: inline-block;
+}
+
+.menu-links a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  margin-right: 1rem;
+}
+
+.menu-links a:hover {
+  color: #979797;
 }
 
 i.fa-bars {
@@ -40,7 +79,7 @@ i.fa-bars {
 }
 
 .hero {
-  height: 100vh;
+  /*height: 100vh;*/
   width: 100%;
   background-color:rgba(31, 75, 100,0.8);
   text-align: center;
@@ -51,10 +90,12 @@ i.fa-bars {
 }
 
 .animated-header {
-  width: 80%;
-  margin: 25% auto 0;
+  padding: 10rem 0;
   color: white;
-  text-align: center;
+}
+
+.animated-header a {
+  margin-top: 2rem;
 }
 
 .scroll-button {
@@ -73,9 +114,9 @@ i.fa-bars {
 
 video { 
     position: fixed;
-    top: 50%;
+    top: 35%;
     left: 50%;
-    width: 100%;
+    min-width: 100%;
     height: 100%;
     width: auto;
     height: auto;
@@ -87,6 +128,7 @@ video {
 
 .about-me {
   background-color: #fff;
+  padding:5rem 0;
 }
 
 .container {
@@ -109,6 +151,7 @@ video {
 
 .portfolio {
   background-color: #E9ECEF;
+  padding:5rem 0;
 }
 
 /*.portfolio-container {
@@ -147,8 +190,13 @@ video {
   opacity: 1;
 }
 
+.portfolio-descriptions {
+  display: none;
+}
+
 .contacts {
   background-color: #fff;
+  padding: 5rem 0;
 }
 
 .button {
@@ -159,6 +207,8 @@ video {
   border:1px solid;
   text-align: center;
   margin:0.5rem auto;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .fb-button {
@@ -179,4 +229,73 @@ img {width: 100%;}
 footer {
   background-color: rgb(31, 75, 100);
   color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    background-color: transparent;
+    padding: 1rem 0;
+    -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+    transition: background .5s ease-in-out,padding .5s ease-in-out;
+  }
+
+  .menu-links {
+    display: inline-block;
+  }
+
+  i.fa-bars {
+  display: none;
+}
+
+  .hero {
+    height: 100vh;
+  }
+
+  .animated-header {
+    padding-top: 24vh;
+  }
+
+  .about-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .image-circle {
+    margin-right: 1rem;
+  }
+
+  .portfolio-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .portfolio-figures {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-item {
+    width: 100%;
+    height: 8rem;
+    margin: .5rem;
+    overflow: hidden;
+  }
+
+  .portfolio-descriptions {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .portfolio-desc {
+    height: 8rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .contacts .button {
+    margin:.5rem;
+  }
 }
