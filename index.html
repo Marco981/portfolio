@@ -13,9 +13,9 @@
   <header class="navbar">
     <nav>
       <ul class="menu-links" role="navigation">
-        <li><a href="#" alt="about me section">About</a></li>
-        <li><a href="#" alt="portfolio section">Portfolio</a></li>
-        <li><a href="#" alt="contact me section">Contacts</a></li>
+        <li><a class="scroll" href="#about-me" alt="about me section">About</a></li>
+        <li><a class="scroll" href="#portfolio" alt="portfolio section">Portfolio</a></li>
+        <li><a class="scroll" href="#contacts" alt="contact me section">Contacts</a></li>
       </ul>
     </nav>
     <i class="fa fa-bars"></i>
@@ -28,10 +28,10 @@
     <div class="animated-header">
       <h1>Marco Caramaschi</h1>
       <h2>Web Developer</h2>
-      <a class="scroll-button" href="#scroll-portfolio"><i class="fa fa-angle-double-down"></i></a>
+      <a class="scroll-button scroll" href="#portfolio"><i class="fa fa-angle-double-down"></i></a>
     </div>
   </section>
-  <section class="about-me">
+  <section class="about-me" id="about-me">
     <div class="container">
       <h2 class="wp-anchor"><span class="dot">.</span>A little introduction</h2>
       <div class="about-flex">
@@ -48,7 +48,7 @@
       </div>
     </div>
   </section>
-  <section class="portfolio">
+  <section class="portfolio" id="portfolio">
     <div class="container">
       <h2 class="wp-anchor"><span class="dot">.</span>portfolio</h2>
       <h4>Some of the latest projects I've been working on.</h4>
@@ -83,7 +83,7 @@
       </div>
     </div>
   </section>
-  <section class="contacts">
+  <section class="contacts" id="contacts">
     <div class="container">
       <h2 class="wp-anchor"><span class="dot">.</span>Like what you see?</h2>
       <div class="text-center">
@@ -115,6 +115,15 @@
   $(window).on("scroll", function() {
     $("header").toggleClass("scrolled-header", $(this).scrollTop() > 50)
 });
+
+  var scrollLink = $(".scroll");
+
+  scrollLink.click(function(e){
+    e.preventDefault();
+    $("body,html").animate({
+      scrollTop: $(this.hash).offset().top
+    },1000)
+  })
    
 </script>
 </body>
