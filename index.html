@@ -6,19 +6,22 @@
   <title>Marco's Portfolio</title>
   <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="resources/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
   <link rel="stylesheet" type="text/css" href="resources/css/style.css">
   <script src="https://use.fontawesome.com/734df37760.js"></script>
 </head>
 <body>
   <header class="navbar">
-    <nav>
-      <ul class="menu-links" role="navigation">
-        <li><a class="scroll" href="#about-me" alt="about me section">About</a></li>
-        <li><a class="scroll" href="#portfolio" alt="portfolio section">Portfolio</a></li>
-        <li><a class="scroll" href="#contacts" alt="contact me section">Contacts</a></li>
-      </ul>
+    <nav class="container menu-links">
+      <div class="menu-links">
+        <ul class="" role="navigation">
+          <li><a class="scroll" href="#about-me" alt="about me section">About</a></li>
+          <li><a class="scroll" href="#portfolio" alt="portfolio section">Portfolio</a></li>
+          <li><a class="scroll" href="#contacts" alt="contact me section">Contacts</a></li>
+        </ul>
+      </div>
     </nav>
-    <i class="fa fa-bars"></i>
+    <i class="fa fa-bars mobile-menu"></i>
   </header>
   <section class="hero">
     <video poster="resources/images/background-screenshot.png" id="bgvid" playsinline autoplay muted loop>
@@ -34,52 +37,36 @@
   <section class="about-me" id="about-me">
     <div class="container">
       <h2 class="wp-anchor"><span class="dot">.</span>A little introduction</h2>
-      <div class="about-flex">
-        <div class="image-circle">
+      <div class="flex-container">
+        <div class="image-circle left-side">
           <img src="resources/images/me.jpg" alt="just myself">
         </div>
-        <p>I am a web developer, passionate about working with multidisciplinary teams on different products.
-        I am experienced in building websites from a design, making them compatible for different types of browser and devices implementing animations and making them captivating. 
-        I am a web developer, passionate about working with multidisciplinary teams on different products.
-        I am experienced in building websites from a design, making them compatible for different types of browser and devices implementing animations and making them captivating. 
-        I am a web developer, passionate about working with multidisciplinary teams on different products.
-        I am experienced in building websites from a design, making them compatible for different types of browser and devices implementing animations and making them captivating. 
-        </p>
+        <div class="about-p right-side">
+          <p>I am a Frontend Web Developer, who has experience building pixel perfect Web Applications, that means I can turn a mock up design into a live website, which will be responsive, adapting perfectly to different devices and browsers.</p>
+
+          <p>I'm looking for an opportunity to work for a company where I can use my HTML CSS and JavaScript skills to improve the overall performance. If this is something that suits your company needs, please feel free to contact me with my details below.
+          </p>
+        </div>
       </div>
     </div>
   </section>
   <section class="portfolio" id="portfolio">
     <div class="container">
       <h2 class="wp-anchor"><span class="dot">.</span>portfolio</h2>
-      <h4>Some of the latest projects I've been working on.</h4>
-      <div class="portfolio-container">
-        <div class="portfolio-figures">
+      <h4>Some of the projects I've been working on.</h4>
+      <div class="flex-container">
           <figure class="portfolio-item">
-            <img src="resources/images/colmar.png" alt="colmar academy thumbnail">
-            <figcaption><p>Colmar Academy</p></figcaption>
+            <img src="resources/images/YelpCamp.png" alt="YelpCamp thumbnail">
+            <a href="yelpcamp.html"><figcaption><p>YelpCamp</p></figcaption></a>
           </figure>
           <figure class="portfolio-item">
             <img src="resources/images/EnergyFood.png" alt="energy food thumbnail">
-            <figcaption><p>Energy Food</p></figcaption>
+            <a href="energy-food.html"><figcaption><p>Energy Food</p></figcaption></a>
           </figure>
           <figure class="portfolio-item">
             <img src="resources/images/iWeather.png" alt="iweaher thumbnail">
-            <figcaption><p>iWeather</p></figcaption>
+            <a href="iweather.html" target="_blank"><figcaption><p>iWeather</p></figcaption></a>
           </figure>
-        </div>
-        <div class="portfolio-descriptions">
-          <div class="portfolio-desc">
-            <h4>Colmar Academy</h4>
-            <p>Made a website for a school,that operates on-site and online,using primarly flexbox,css3 anumations and optimizing the ARIA attributes for accessibility</p>
-          </div>
-          <div class="portfolio-desc">
-            <h4>Energy food</h4>
-            <p>website for an online restaurant that does deliveries and offers different subscription options to its meals, made using different libraries,animate.css and waypoint.js</p>
-          </div>
-          <div class="portfolio-desc">
-            <h4>iWeather</h4>
-            <p>Landing page for a phone app using bootstrap,javascript and css animations</p>
-          </div>
       </div>
     </div>
   </section>
@@ -88,26 +75,50 @@
       <h2 class="wp-anchor"><span class="dot">.</span>Like what you see?</h2>
       <div class="text-center">
         <p>Then what are you waiting for?</p>
-        <a class="button" href="mailto:marcopcaramaschi@gmail.com?Subject=Hello%20again" target="_top">hire me</a>
-        <p>Or you can find me here:</p>
-        <a class="fb-button button" href="http://www.facebook.com" target="_blank"><i></i>Facebook</a>
-        <a class="twit-button button" href="http://www.twitter.com" target="_blank"><i></i>Twitter</a>
-        <a class="ln-button button" href="http://www.linkedin.com" target="_blank"><i></i>LinkedIn</a>
+        <a class="button link-button shake-chunk shake-freeze" href="mailto:marcopcaramaschi@gmail.com?Subject=Hello,%20Marco!" target="_top">hire me</a>
+        <p>Or, if you are around, you can find me here, in the glorious Peckham:</p>
+        <div id="map"></div>
       </div>
     </div>
   </section>
   <footer>
-    <p>copyright Marco Caramaschi</p>
+    <div class="container">
+      <p>Built with a lot of<i class="fa fa-coffee" style="color: black; padding: 0 3px;"></i> in London, UK</p>
+      <div>
+        <a class="fb-button button" href="https://www.facebook.com/marco.p.caramaschi" target="_blank">
+            <span>Facebook</span>
+            <div class="icon fb-icon">
+            <i class="fa fa-facebook"></i>
+            </div>
+          </a>
+          <a class="twit-button button" href="https://twitter.com/marco981" target="_blank">
+            <span>Twitter</span>
+            <div class="icon twit-icon">
+            <i class="fa fa-twitter"></i>
+            </div></a>
+          <a class="ln-button button" href="https://www.linkedin.com/in/marco-caramaschi/" target="_blank">
+            <span>linkedin</span>
+            <div class="icon ln-icon">
+            <i class="fa fa-linkedin"></i>
+            </div>
+          </a>
+          <a class="gh-button button" href="https://github.com/Marco981" target="_blank">
+            <span>GitHub</span>
+            <div class="icon gh-icon">
+            <i class="fa fa-github-alt"></i>
+            </div>
+          </a>
+      </div>
+    </div>
   </footer>
  <script
   src="https://code.jquery.com/jquery-3.2.1.min.js"
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
-
   <script type="text/javascript" src="resources/js/jquery.waypoints.min.js"></script>
-  <script>  
+  <script>
     var waypoints = $(".wp-anchor").waypoint(function(direction) {
-  $(this.element).addClass("typed"); 
+  $(this.element).addClass("typed");
 }, {
   offset: '75%'
 });
@@ -116,6 +127,7 @@
     $("header").toggleClass("scrolled-header", $(this).scrollTop() > 50)
 });
 
+
   var scrollLink = $(".scroll");
 
   scrollLink.click(function(e){
@@ -123,8 +135,33 @@
     $("body,html").animate({
       scrollTop: $(this.hash).offset().top
     },1000)
-  })
-   
+  });
+
+$(".mobile-menu").on("click", function() {
+  $(".menu-links").toggleClass("menu-visible");
+});
+
+$(window).resize(function(){
+ if($(window).width()>767){
+  $('.menu-links').removeClass("menu-visible");
+ }
+});
+
+
+
+var map;
+  function initMap() {
+    var peckham = {lat: 51.471330, lng: -0.069523}
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: peckham,
+      zoom: 10
+    });
+    var marker = new google.maps.Marker({
+          position: peckham,
+          map: map
+        });
+  }
 </script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVg5B8eaiy9mQZswcnEb5nrLNMiZ1-h-o&callback=initMap" async defer></script>
 </body>
 </html>
