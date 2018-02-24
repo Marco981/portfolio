@@ -41,13 +41,18 @@ img {
     color: red;
 }
 
+.wp-anchor {
+	opacity: 0;
+}
+
 .typed {
     border-right: .1em solid #979797;
+    opacity:1;
     width: 15rem;
     white-space: nowrap;
     overflow: hidden;
-    -webkit-animation: typing 2s steps(30), blink-caret .5s step-end infinite alternate;
-    animation: typing 2s steps(30), blink-caret .5s step-end infinite alternate;
+    -webkit-animation: typing 3s steps(30), blink-caret .5s step-end infinite alternate;
+    animation: typing 3s steps(30), blink-caret .5s step-end infinite alternate;
 }
 
 .container {
