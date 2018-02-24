@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Marco's Portfolio</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="resources/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake.min.css">
@@ -129,6 +131,12 @@
   <script type="text/javascript" src="resources/js/jquery.waypoints.min.js"></script>
   <script>
     var waypoints = $(".wp-anchor").waypoint(function(direction) {
+  $(this.element).addClass("typed");
+}, {
+  offset: '75%'
+});
+
+    var waypoints = $(".wp-skills").waypoint(function(direction) {
   $(this.element).addClass("typed");
 }, {
   offset: '75%'
