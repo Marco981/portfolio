@@ -173,6 +173,7 @@ section {
     background-color: green;
     color: white;
     padding: 0.5rem 0.7rem;
+    transform: rotate(13deg) scale(1.87) skew(0deg) translate(-3px);
 }
 
 .fb-button {
@@ -241,7 +242,7 @@ header {
 
 .menu-links a:hover,
 .menu-links a:focus {
-    color: #979797;
+    color: #d9d9d9;
 }
 
 .menu-links a:hover::after {
@@ -406,6 +407,7 @@ footer {
 
 #skills ul {
   padding-top: 50px;
+  padding-left: 0;
 }
 #skills ul > li {
   margin-bottom: 70px;
@@ -425,9 +427,16 @@ footer {
   top: -30px;
 }
 #skills ul > li span {
-  height: 1px;
-  margin: 2px 0;
-  background: #2187e7;
+  height: 5px;
+  margin:  0;
+  background: rgba(57, 106, 174,1);
+  background: -moz-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(227,32,81,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(73,155,234,1)), color-stop(100%, rgba(227,32,81,1)));
+  background: -webkit-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(227,32,81,1) 100%);
+  background: -o-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(227,32,81,1) 100%);
+  background: -ms-linear-gradient(left, rgba(73,155,234,1) 0%, rgba(227,32,81,1) 100%);
+  background: linear-gradient(to right, rgba(73,155,234,1) 0%, rgba(227,32,81,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#499bea', endColorstr='#e32051', GradientType=1 );
   position: absolute;
   box-shadow: 0px 0px 5px 1px rgb(57, 106, 174);
 }
@@ -450,7 +459,7 @@ footer {
 }
 
 .react {
-  width: 30%;
+  width: 25%;
   animation: react 2s ease-out;
 }
 
@@ -463,6 +472,7 @@ footer {
   0% {
     width: 0px;
   }
+
   100% {
     width: 70%;
   }
@@ -497,7 +507,7 @@ footer {
     width: 0px;
   }
   100% {
-    width: 30%;
+    width: 25%;
   }
 }
 
@@ -550,7 +560,7 @@ footer {
     }
     .image-circle {
         margin-right: 1rem;
-        width:
+        align-self: flex-start;
     }
     .portfolio-item {
         width: 100%;
