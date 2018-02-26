@@ -3,7 +3,9 @@
         width: 0;
     }
     to {
-        width: 100%;
+        width: 30%;
+
+
     }
 }
 
@@ -46,7 +48,7 @@ img {
 }
 
 .typed {
-    border-right: .1em solid #979797;
+    /*border-right: .1em solid #979797;*/
     opacity:1;
     width: 15rem;
     white-space: nowrap;
@@ -114,19 +116,19 @@ section {
     text-align: center;
 }
 
-.button span {
+.button:hover span {
     width: 72%;
-    left: 1rem;
+    right: 1rem;
     line-height: inherit;
 }
 
-.button .icon {
+.button:hover .icon {
     right: 0;
     top: 0;
     width: 0%;
 }
 
-.button .icon .fa {
+.button .icon .fa:before {
     vertical-align: top;
 }
 
@@ -148,32 +150,41 @@ section {
 
 .button span,
 .button div,
-.button i {
+.button .icon .fa:before {
     transition: all 350ms ease-out;
 }
 
-.button:hover span {
-    left: -72%;
+.button span {
+    right: 172%;
 }
 
-.button:hover .icon {
+.button .icon {
     width: 100%;
     border-radius: .5rem;
+    top:0;
+    right: 0;
 }
 
-.button:hover .icon .fa {
+.button .icon .fa {
     font-size: 2.8rem;
+}
+
+.button:hover .icon .fa:before {
+    font-size: 0rem;
 }
 
 .link-button {
     width: 13rem;
+    color:green;
 }
 
 .link-button:hover {
     background-color: green;
     color: white;
-    padding: 0.5rem 0.7rem;
-    transform: rotate(13deg) scale(1.87) skew(0deg) translate(-3px);
+    /*padding: 0.5rem 0.7rem;*/
+    /*transform: scaleX(1.1);
+    transform: scaleY(1.1);*/
+    
 }
 
 .fb-button {
@@ -212,8 +223,9 @@ header {
 .menu-links {
     transition: all .5s ease;
     left: -10rem;
-    bottom: -2.75rem;
+    bottom: -3.25rem;
     position: absolute;
+    float:right;
 }
 
 .menu-links ul {
@@ -227,14 +239,14 @@ header {
     left: 0;
     height: .1rem;
     width: 0%;
-    background-color: white;
+    background-color: rgb(57, 106, 174);
     transition: width 200ms ease-in-out;
 }
 
 .menu-links a {
-    text-transform: uppercase;
+    text-transform: capitalize;
     text-decoration: none;
-    color: #fff;
+    color: white;
     margin-right: 1rem;
     margin-left: 1rem;
     position: relative;
@@ -242,19 +254,26 @@ header {
 
 .menu-links a:hover,
 .menu-links a:focus {
-    color: #d9d9d9;
+    color: #f9f9f9;
 }
 
 .menu-links a:hover::after {
     width: 100%;
 }
 
+.scrolled-header a {
+	color: white
+}
+.scrolled-header a::after {
+	background-color: white;
+}
+
 .menu-visible {
     display: block;
     width: 100%;
     position: absolute;
-    bottom: -2.75rem;
-    background-color: rgba(31, 75, 100, 0.8);
+    bottom: -3.25rem;
+    background-color: rgba(57, 106, 174,.7);
     left: 0;
 }
 
@@ -270,7 +289,7 @@ i.fa-bars {
 
 .hero {
     width: 100%;
-    background-color: rgba(57, 106, 174, 0.9);
+    background-color: rgba(57, 106, 174, 0.75);
     text-align: center;
     position: relative;
 }
@@ -288,23 +307,6 @@ i.fa-bars {
     margin-top: 2rem;
 }
 
-.scroll-button {
-    display: inline-block;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    width: 2.5rem;
-    height: 2.5rem;
-    position: absolute;
-    bottom: 4rem;
-    left: 50%;
-    transform: translate(-50%);
-}
-
-.scroll-button i {
-    font-size: 2rem;
-    color: #fff;
-    padding-top: .3rem;
-}
 
 video {
     position: fixed;
@@ -528,8 +530,9 @@ footer {
     .right-side {
         width: 55%;
     }
+    
     header {
-        background-color: transparent;
+        background-color: #fff;
         padding: 1rem 0;
         -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
@@ -546,15 +549,34 @@ footer {
     .menu-links li {
         display: inline-block;
     }
+
+    .menu-links a {
+    	color: #969696;
+    }
+
+    .menu-links a:hover,
+    .menu-links a:focus {
+    	color: rgb(57, 106, 174);
+    }
+
+
+    .scrolled-header a {
+    	color: white;
+    }
+    .scrolled-header a:hover,
+    .scrolled-header a:focus {
+    	color: #f9f9f9;
+    }
+
     i.fa-bars {
         display: none;
     }
     .hero {
-        height: 100vh;
+        height: 50vh;
     }
-    .animated-header {
+    /*.animated-header {
         padding-top: 24vh;
-    }
+    }*/
     .about-p {
         width: 60%;
     }

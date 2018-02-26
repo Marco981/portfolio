@@ -21,9 +21,9 @@
     <nav class="container menu-links">
       <div class="menu-links">
         <ul class="" role="navigation">
-          <li><a class="scroll" href="#about-me" alt="about me section">About</a></li>
-          <li><a class="scroll" href="#portfolio" alt="portfolio section">Portfolio</a></li>
-          <li><a class="scroll" href="#contacts" alt="contact me section">Contacts</a></li>
+          <li><a class="scroll" href="#about-me" alt="about me section"><span class="dot">.</span>About</a></li>
+          <li><a class="scroll" href="#portfolio" alt="portfolio section"><span class="dot">.</span>Portfolio</a></li>
+          <li><a class="scroll" href="#contacts" alt="contact me section"><span class="dot">.</span>Contacts</a></li>
         </ul>
       </div>
     </nav>
@@ -37,7 +37,7 @@
     <div class="animated-header">
       <h1>Marco Caramaschi</h1>
       <h2>Web Developer</h2>
-      <a class="scroll-button scroll" href="#portfolio"><i class="fa fa-angle-double-down"></i></a>
+      <!-- <a class="scroll-button scroll" href="#portfolio"><i class="fa fa-angle-double-down"></i></a> -->
     </div>
   </section>
   <section class="about-me" id="about-me">
@@ -97,10 +97,10 @@
         <div>
         	<p>Let's get in touch:</p>
         	<a class="fb-button button" href="https://www.facebook.com/marco.p.caramaschi" target="_blank">
-            <span>Facebook</span>
-            <div class="icon fb-icon">
-            <i class="fa fa-facebook"></i>
-            </div>
+	            <span>Facebook</span>
+	            <div class="icon fb-icon">
+	            	<i class="fa fa-facebook"></i>
+	            </div>
           </a>
           <a class="twit-button button" href="https://twitter.com/marco981" target="_blank">
             <span>Twitter</span>
@@ -155,13 +155,12 @@
 
     var waypoints = $(".skill").waypoint(function(direction) {
   		$(this.element).addClass(this.element.id)
-  		console.log(this)
-}, {
+  		console.log(this)}, {
   offset: '85%'
 });
 
   $(window).on("scroll", function() {
-    $("header").toggleClass("scrolled-header", $(this).scrollTop() > 50)
+    $("header").toggleClass("scrolled-header", $(this).scrollTop() > 130)
 });
 
 
