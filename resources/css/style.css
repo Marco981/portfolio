@@ -54,8 +54,8 @@ section {
     width: 15rem;
     white-space: nowrap;
     overflow: hidden;
-    -webkit-animation: typing 1s steps(30), blink-caret .5s step-end infinite alternate;
-    animation: typing 1s steps(30), blink-caret .5s step-end infinite alternate;
+    -webkit-animation: typing 1s steps(50), blink-caret .5s step-end infinite alternate;
+    animation: typing 1s steps(50), blink-caret .5s step-end infinite alternate;
 }
 
 @-webkit-keyframes typing {
@@ -63,7 +63,7 @@ section {
         width: 0;
     }
     to {
-        width: 30%;
+        width: 100%;
 
 
     }
