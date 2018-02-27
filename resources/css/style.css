@@ -54,8 +54,8 @@ section {
     width: 15rem;
     white-space: nowrap;
     overflow: hidden;
-    -webkit-animation: typing 1s steps(50), blink-caret .5s step-end infinite alternate;
-    animation: typing 1s steps(50), blink-caret .5s step-end infinite alternate;
+    -webkit-animation: typing 5s steps(60);
+    animation: typing 5s steps(60);
 }
 
 @-webkit-keyframes typing {
@@ -69,11 +69,17 @@ section {
     }
 }
 
-@-webkit-keyframes blink-caret {
-    50% {
-        border-color: transparent;
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+
+
     }
 }
+
 
 
 
