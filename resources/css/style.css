@@ -560,6 +560,11 @@ footer {
     height: calc(100vh-6rem);
 }
 
+footer .container {
+    flex-direction: row;
+    text-align: center;
+}
+
 
 /*MEDIA QUERIES DESKTOP*/
 
