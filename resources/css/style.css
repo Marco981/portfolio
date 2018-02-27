@@ -1,19 +1,4 @@
-@-webkit-keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 30%;
-
-
-    }
-}
-
-@-webkit-keyframes blink-caret {
-    50% {
-        border-color: transparent;
-    }
-}
+/*universal settings*/
 
 body {
     font-family: "Oxygen", sans-serif;
@@ -39,6 +24,22 @@ img {
     height: auto;
 }
 
+section {
+    color: #979797;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
 .dot {
     color: red;
 }
@@ -53,26 +54,34 @@ img {
     width: 15rem;
     white-space: nowrap;
     overflow: hidden;
-    -webkit-animation: typing 3s steps(30), blink-caret .5s step-end infinite alternate;
-    animation: typing 3s steps(30), blink-caret .5s step-end infinite alternate;
+    -webkit-animation: typing 2s steps(30), blink-caret .5s step-end infinite alternate;
+    animation: typing 2s steps(30), blink-caret .5s step-end infinite alternate;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
+@-webkit-keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 30%;
+
+
+    }
 }
+
+@-webkit-keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
 
 .text-center {
     text-align: center;
     padding-top: 2rem;
 }
 
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .projects-container {
     padding: 5rem 0;
@@ -87,121 +96,10 @@ img {
     width: 90%;
 }
 
-section {
-    color: #979797;
-}
 
-.button {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: transparent;
-    border-radius: .5rem;
-    border: 1px solid;
-    text-align: center;
-    margin: 0.5rem auto;
-    text-decoration: none;
-    text-transform: uppercase;
-    transition: all ease 200ms;
-    position: relative;
-    width: 7.25rem;
-    height: 2.6rem;
-    overflow: hidden;
-}
 
-.button span,
-.button .icon {
-    position: absolute;
-    display: block;
-    height: 100%;
-    text-align: center;
-}
 
-.button:hover span {
-    width: 72%;
-    right: 1rem;
-    line-height: inherit;
-}
-
-.button:hover .icon {
-    right: 0;
-    top: 0;
-    width: 0%;
-}
-
-.button .icon .fa:before {
-    vertical-align: top;
-}
-
-.icon {
-    width: 12.5rem;
-}
-
-.fb-icon {
-    background-color: #4267B2;
-}
-
-.twit-icon {
-    background-color: #1DA1F2;
-}
-
-.ln-icon {
-    background-color: white;
-}
-
-.button span,
-.button div,
-.button .icon .fa:before {
-    transition: all 350ms ease-out;
-}
-
-.button span {
-    right: 172%;
-}
-
-.button .icon {
-    width: 100%;
-    border-radius: .5rem;
-    top:0;
-    right: 0;
-}
-
-.button .icon .fa {
-    font-size: 2.8rem;
-}
-
-.button:hover .icon .fa:before {
-    font-size: 0rem;
-}
-
-.link-button {
-    width: 13rem;
-    color:green;
-}
-
-.link-button:hover {
-    background-color: green;
-    color: white;
-    /*padding: 0.5rem 0.7rem;*/
-    /*transform: scaleX(1.1);
-    transform: scaleY(1.1);*/
-    
-}
-
-.fb-button {
-    color: #8b9dc3;
-}
-
-.twit-button {
-    color: #63B3FF;
-}
-
-.ln-button {
-    color: #0177B5;
-}
-
-.gh-button {
-    color: #24292E
-}
+ /*header section*/
 
 header {
     background-color: rgb(57, 106, 174);
@@ -214,6 +112,18 @@ header {
     z-index: 1000;
 }
 
+.title {
+    display: inline-block;
+    margin-top: 0rem;
+    margin-bottom: 0;
+}
+
+.title h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 1rem;
+    }
+
 .scrolled-header {
     background-color: rgb(57, 106, 174);
     padding: 0;
@@ -223,7 +133,7 @@ header {
 .menu-links {
     transition: all .5s ease;
     left: -10rem;
-    bottom: -3.25rem;
+    bottom: -6.25rem;
     position: absolute;
     float:right;
 }
@@ -272,7 +182,7 @@ header {
     display: block;
     width: 100%;
     position: absolute;
-    bottom: -3.25rem;
+    bottom: -6.25rem;
     background-color: rgba(57, 106, 174,.7);
     left: 0;
 }
@@ -287,28 +197,37 @@ i.fa-bars {
     cursor: pointer;
 }
 
+/*HERO section*/
+
 .hero {
     width: 100%;
     background-color: rgba(57, 106, 174, 0.75);
     text-align: center;
     position: relative;
+    background: url(../images/screenshot.png) center no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(57, 106, 174, 0.5);
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    display:none;
 }
 
 .animated-header {
-    padding: 10rem 0;
+    padding: 5rem 0;
     color: white;
 }
 
-.animated-header a {
-    margin-top: 2rem;
+.animated-header h2 {
+    margin-top: 3rem;
+    margin-bottom: 0;
 }
 
 
+
+
 video {
+    display:none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -321,6 +240,8 @@ video {
     background: url('../images/background-screenshot.png') no-repeat;
     background-size: cover;
 }
+
+/*ABOUT section*/
 
 .about-me {
     background-color: #fff;
@@ -340,64 +261,6 @@ video {
     height: auto;
     margin: 0 auto;
     box-shadow: 0px 0px 19px 0px rgba(50, 50, 50, 0.45);
-}
-
-.portfolio {
-    background-color: #E9ECEF;
-    padding: 5rem 0;
-}
-
-.portfolio-item {
-    background-color: #fff;
-    padding: .5rem;
-    position: relative;
-}
-
-.portfolio-item figcaption {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background: rgba(112, 169, 161, 0.8);
-    color: #fff;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    opacity: 0;
-    -webkit-transition: opacity ease-in-out 300ms;
-    transition: opacity ease-in-out 300ms;
-}
-
-.portfolio-item:hover figcaption {
-    opacity: 1;
-}
-
-.portfolio-links {
-    background-color: #E9ECEF;
-    padding-top: 5rem;
-    min-height: calc(100vh - 4rem);
-}
-
-.contacts {
-    background-color: #fff;
-    padding: 5rem 0;
-}
-
-#map {
-    height: 10rem;
-}
-
-footer {
-    background-color: rgb(57, 106, 174);
-    color: white;
-    height: calc(100vh-6rem);
 }
 
 #skills {
@@ -523,6 +386,183 @@ footer {
 }
 
 
+
+/*PORTFOLIO section*/
+
+.portfolio {
+    background-color: #E9ECEF;
+    padding: 5rem 0;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    padding: .5rem;
+    position: relative;
+}
+
+.portfolio-item figcaption {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(112, 169, 161, 0.8);
+    color: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    opacity: 0;
+    -webkit-transition: opacity ease-in-out 300ms;
+    transition: opacity ease-in-out 300ms;
+}
+
+.portfolio-item:hover figcaption {
+    opacity: 1;
+}
+
+.portfolio-links {
+    background-color: #E9ECEF;
+    padding-top: 5rem;
+    min-height: calc(100vh - 4rem);
+}
+
+/*CONTACT section*/
+
+.contacts {
+    background-color: #fff;
+    padding: 5rem 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border-radius: .5rem;
+    border: 1px solid;
+    text-align: center;
+    margin: 0.5rem auto;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all ease 200ms;
+    position: relative;
+    width: 7.25rem;
+    height: 2.6rem;
+    overflow: hidden;
+}
+
+.button span,
+.button .icon {
+    position: absolute;
+    display: block;
+    height: 100%;
+    text-align: center;
+}
+
+.button:hover span {
+    width: 72%;
+    right: 1rem;
+    line-height: inherit;
+}
+
+.button:hover .icon {
+    right: 0;
+    top: 0;
+    width: 0%;
+}
+
+.button .icon .fa:before {
+    vertical-align: top;
+}
+
+.icon {
+    width: 12.5rem;
+}
+
+.fb-icon {
+    background-color: #4267B2;
+}
+
+.twit-icon {
+    background-color: #1DA1F2;
+}
+
+.ln-icon {
+    background-color: white;
+}
+
+.button span,
+.button div,
+.button .icon .fa:before {
+    transition: all 350ms ease-out;
+}
+
+.button span {
+    right: 172%;
+}
+
+.button .icon {
+    width: 100%;
+    border-radius: .5rem;
+    top:0;
+    right: 0;
+}
+
+.button .icon .fa {
+    font-size: 2.8rem;
+}
+
+.button:hover .icon .fa:before {
+    font-size: 0rem;
+}
+
+.link-button {
+    width: 13rem;
+    color:lightseagreen;
+}
+
+.link-button:hover {
+    background-color: lightseagreen;
+    color: white;  
+}
+
+.fb-button {
+    color: #8b9dc3;
+}
+
+.twit-button {
+    color: #63B3FF;
+}
+
+.ln-button {
+    color: #0177B5;
+}
+
+.gh-button {
+    color: #24292E
+}
+
+
+#map {
+    height: 10rem;
+}
+
+/*FOOTER section*/
+
+footer {
+    background-color: rgb(57, 106, 174);
+    color: white;
+    height: calc(100vh-6rem);
+}
+
+
+/*MEDIA QUERIES DESKTOP*/
+
 @media only screen and (min-width:768px) {
     .flex-container {
         flex-direction: row;
@@ -538,6 +578,17 @@ footer {
         -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
         transition: background .5s ease-in-out, padding .5s ease-in-out;
     }
+
+    .title {
+    display: none;
+    margin-top: .5rem;
+    }
+
+    .title h2 {
+        padding-left:0;
+    }
+
+    
     .menu-links {
         display: inline-block;
         padding-left: 0;
@@ -568,15 +619,28 @@ footer {
     	color: #f9f9f9;
     }
 
+    .animated-header {
+    padding: 10rem 0;
+    }
+
+    video {
+        display:block;
+    }
+
     i.fa-bars {
         display: none;
     }
     .hero {
         height: 50vh;
+        background:rgba(57, 106, 174, 0.5) ;
+    
     }
-    /*.animated-header {
-        padding-top: 24vh;
-    }*/
+
+    .hero h1 {
+        display: block;
+        font-size: 3.5rem;
+    }
+ 
     .about-p {
         width: 60%;
     }
@@ -593,9 +657,7 @@ footer {
     .contacts .button {
         margin: .5rem;
     }
-    /*footer {
-        height: 4rem;
-    }*/
+
     footer .container {
         display: flex;
         justify-content: space-between;

@@ -18,7 +18,11 @@
 </head>
 <body>
   <header class="navbar">
-    <nav class="container menu-links">
+  	
+    <nav class="container">
+    	<div class="title">
+    		<h2>Marco Caramaschi</h2>
+    	</div>
       <div class="menu-links">
         <ul class="" role="navigation">
           <li><a class="scroll" href="#about-me" alt="about me section"><span class="dot">.</span>About</a></li>
@@ -36,7 +40,7 @@
     </video>
     <div class="animated-header">
       <h1>Marco Caramaschi</h1>
-      <h2>Web Developer</h2>
+      <h2>Front End Web Developer</h2>
       <!-- <a class="scroll-button scroll" href="#portfolio"><i class="fa fa-angle-double-down"></i></a> -->
     </div>
   </section>
@@ -96,6 +100,7 @@
         <a class="button link-button" href="mailto:marcopcaramaschi@gmail.com?Subject=Hello,%20Marco!" target="_top">hire me</a>
         <div>
         	<p>Let's get in touch:</p>
+        	<div class="flex-container">
         	<a class="fb-button button" href="https://www.facebook.com/marco.p.caramaschi" target="_blank">
 	            <span>Facebook</span>
 	            <div class="icon fb-icon">
@@ -120,6 +125,7 @@
             </div>
           </a>
       </div>
+      </div>
         <p>Or, if you are around, you can find me here, in the glorious Peckham:</p>
         <div id="map"></div>
       </div>
@@ -138,66 +144,7 @@
   integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
   crossorigin="anonymous"></script>
   <script type="text/javascript" src="resources/js/jquery.waypoints.min.js"></script>
-  <script>
-
-  	// var $skill = $(".skill-bars").each(function(){
-  	// 	$(this).find("skill").animate({
-  	// 		width:$(this).attr("data-percent")
-  	// 	},3000);
-  	// });
-  	// console.log($skill)
-
-    var waypoints = $(".wp-anchor").waypoint(function(direction) {
-  $(this.element).addClass("typed");
-}, {
-  offset: '75%'
-});
-
-    var waypoints = $(".skill").waypoint(function(direction) {
-  		$(this.element).addClass(this.element.id)
-  		console.log(this)}, {
-  offset: '85%'
-});
-
-  $(window).on("scroll", function() {
-    $("header").toggleClass("scrolled-header", $(this).scrollTop() > 130)
-});
-
-
-  var scrollLink = $(".scroll");
-
-  scrollLink.click(function(e){
-    e.preventDefault();
-    $("body,html").animate({
-      scrollTop: $(this.hash).offset().top
-    },1000)
-  });
-
-$(".mobile-menu").on("click", function() {
-  $(".menu-links").toggleClass("menu-visible");
-});
-
-$(window).resize(function(){
- if($(window).width()>767){
-  $('.menu-links').removeClass("menu-visible");
- }
-});
-
-
-
-var map;
-  function initMap() {
-    var peckham = {lat: 51.471330, lng: -0.069523}
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: peckham,
-      zoom: 10
-    });
-    var marker = new google.maps.Marker({
-          position: peckham,
-          map: map
-        });
-  }
-</script>
+  <script type="text/javascript" src="resources/js/script.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVg5B8eaiy9mQZswcnEb5nrLNMiZ1-h-o&callback=initMap" async defer></script>
 </body>
 </html>
