@@ -10,10 +10,6 @@ var waypoints = $(".wp-anchor").waypoint(function(direction) {
   offset: '85%'
 });
 
-
-  
-  console.log($(window).width())
-
   $(window).on("scroll", function() {
     $("header").toggleClass("scrolled-header", $(this).scrollTop() > 130);
     var screenWidth = $(window).width();
